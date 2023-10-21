@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  text-align: center;
+  padding: 4vh;
+}
+.img img {
+  height: 45vh;
+  width: 50vw;
+  align-items: center;
+}
+
+.img {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+.discription {
+  padding: 4vh;
+}
+
+.container button {
+  align-self: center;
+  height: 5vh;
+  width: 10vw;
+  border-radius: 5vh;
+  margin-bottom: 10vh;
+  &:hover {
+    background: linear-gradient(
+      90.5deg,
+      rgb(250, 156, 245) 1.6%,
+      rgb(182, 76, 233) 98.2%
+    );
+    border: 1px solid white;
+  }
+}
