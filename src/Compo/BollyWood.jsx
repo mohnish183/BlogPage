@@ -4,8 +4,6 @@ import "../CompoUI/BollyWood.css";
 import { StoreData } from "../Store/Store";
 const BollyWood = () => {
   const bollyWoodData = useContext(StoreData);
-  let count_1 = 0,
-    count_2 = 0;
 
   return (
     <div className="container">

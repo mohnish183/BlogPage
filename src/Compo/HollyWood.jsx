@@ -5,16 +5,16 @@ import { StoreData } from "../Store/Store";
 const HollyWood = () => {
   // const hollyWoodData = useContext(StoreData);
   const bollyWoodData = useContext(StoreData);
-  let count_1 = 0,
-    count_2 = 0;
 
   return (
     <div className="container">
       <h3 className="category-title">Hollywood</h3>
 
-      {bollyWoodData.newsData.map((item, index) => {
-        count_1++;
-        if (item.category === "Holly" && count_1 > 16 && count_1 < 27) {
+      {bollyWoodData.newsData
+        .filter(
+          (item, index) => item.category === "Holly" && index > 16 && index < 27
+        )
+        .map((item, index) => {
           return (
             <div key={index} className="container-1">
               <div className="flex_container box1">
@@ -39,14 +39,16 @@ const HollyWood = () => {
               ></hr>
             </div>
           );
-        }
-      })}
+        })}
       {/* ........................................ */}
       <div className="container2">
         <h4>TOP headLine</h4>
-        {bollyWoodData.newsData.map((item, index) => {
-          count_2++;
-          if (item.category === "Holly" && count_2 > 26 && count_2 < 32) {
+        {bollyWoodData.newsData
+          .filter(
+            (item, index) =>
+              item.category === "Holly" && index > 26 && index < 32
+          )
+          .map((item, index) => {
             return (
               <div key={index}>
                 <div className="flex_container2">
@@ -71,8 +73,7 @@ const HollyWood = () => {
                 ></hr>
               </div>
             );
-          }
-        })}
+          })}
       </div>
     </div>
   );

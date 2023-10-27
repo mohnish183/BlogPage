@@ -9,16 +9,16 @@ function Footer() {
             <h4>company</h4>
             <ul>
               <li>
-                <a href="#">about us</a>
+                <Link to="">about us</Link>
               </li>
               <li>
-                <a href="#">our services</a>
+                <Link to="">our services</Link>
               </li>
               <li>
-                <a href="#">privacy policy</a>
+                <Link to="">privacy policy</Link>
               </li>
               <li>
-                <a href="#">affiliate program</a>
+                <Link to="">affiliate program</Link>
               </li>
             </ul>
           </div>
@@ -26,19 +26,19 @@ function Footer() {
             <h4>get help</h4>
             <ul>
               <li>
-                <a href="#">FAQ</a>
+                <Link to="">FAQ</Link>
               </li>
               <li>
-                <a href="#">shipping</a>
+                <Link to="">shipping</Link>
               </li>
               <li>
-                <a href="#">returns</a>
+                <Link to="">returns</Link>
               </li>
               <li>
-                <a href="#">order status</a>
+                <Link to="">order status</Link>
               </li>
               <li>
-                <a href="#">payment options</a>
+                <Link to="">payment options</Link>
               </li>
             </ul>
           </div>
@@ -46,37 +46,37 @@ function Footer() {
             <h4>Catergory</h4>
             <ul>
               <li>
-                <a href="#">Bollywood</a>
+                <Link to="">Bollywood</Link>
               </li>
               <li>
-                <a href="#">Hollywood</a>
+                <Link to="">Hollywood</Link>
               </li>
               <li>
-                <a href="#">Tech</a>
+                <Link to="">Tech</Link>
               </li>
               <li>
-                <a href="#">Food</a>
+                <Link to="">Food</Link>
               </li>
               <li>
-                <a href="#">Fitness</a>
+                <Link to="">Fitness</Link>
               </li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>follow us</h4>
             <div class="social-links">
-              <a href="#">
+              <Link to="">
                 <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="">
                 <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="">
                 <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="">
                 <i class="fab fa-linkedin-in"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

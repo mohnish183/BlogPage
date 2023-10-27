@@ -1,10 +1,5 @@
 import React from "react";
 import { createContext, useState } from "react";
-import BollyWood from "../Compo/BollyWood";
-import Fitness from "../Compo/Fitness";
-import Food from "../Compo/Food";
-import HollyWood from "../Compo/HollyWood";
-import Tech from "../Compo/Tech";
 
 export const StoreData = createContext();
 export default function Store(props) {
