@@ -9,16 +9,16 @@ function Footer() {
             <h4>company</h4>
             <ul>
               <li>
-                <Link to="">about us</Link>
+                <Link to={""}>about us</Link>
               </li>
               <li>
-                <Link to="">our services</Link>
+                <Link to={""}>our services</Link>
               </li>
               <li>
-                <Link to="">privacy policy</Link>
+                <Link to={""}>privacy policy</Link>
               </li>
               <li>
-                <Link to="">affiliate program</Link>
+                <Link to={""}>affiliate program</Link>
               </li>
             </ul>
           </div>
@@ -26,19 +26,19 @@ function Footer() {
             <h4>get help</h4>
             <ul>
               <li>
-                <Link to="">FAQ</Link>
+                <Link to={""}>FAQ</Link>
               </li>
               <li>
-                <Link to="">shipping</Link>
+                <Link to={""}>shipping</Link>
               </li>
               <li>
-                <Link to="">returns</Link>
+                <Link to={""}>returns</Link>
               </li>
               <li>
-                <Link to="">order status</Link>
+                <Link to={""}>order status</Link>
               </li>
               <li>
-                <Link to="">payment options</Link>
+                <Link to={""}>payment options</Link>
               </li>
             </ul>
           </div>
@@ -46,35 +46,35 @@ function Footer() {
             <h4>Catergory</h4>
             <ul>
               <li>
-                <Link to="">Bollywood</Link>
+                <Link to={""}>Bollywood</Link>
               </li>
               <li>
-                <Link to="">Hollywood</Link>
+                <Link to={""}>Hollywood</Link>
               </li>
               <li>
-                <Link to="">Tech</Link>
+                <Link to={""}>Tech</Link>
               </li>
               <li>
-                <Link to="">Food</Link>
+                <Link to={""}>Food</Link>
               </li>
               <li>
-                <Link to="">Fitness</Link>
+                <Link to={""}>Fitness</Link>
               </li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>follow us</h4>
             <div class="social-links">
-              <Link to="">
+              <Link to={""}>
                 <i class="fab fa-facebook-f"></i>
               </Link>
-              <Link to="">
+              <Link to={""}>
                 <i class="fab fa-twitter"></i>
               </Link>
-              <Link to="">
+              <Link to={""}>
                 <i class="fab fa-instagram"></i>
               </Link>
-              <Link to="">
+              <Link to={""}>
                 <i class="fab fa-linkedin-in"></i>
               </Link>
             </div>
