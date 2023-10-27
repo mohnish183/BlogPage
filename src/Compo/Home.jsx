@@ -42,8 +42,9 @@ const Home = () => {
           The Latest
         </h3>
         <div className="flexContainer">
-          {homeData.newsData.map((item, index) => {
-            if (index >= 0 && index <= 2)
+          {homeData.newsData
+            .filter((item, index) => index >= 0 && index <= 2)
+            .map((item, index) => {
               return (
                 <div className="item">
                   <Link to={`/detail/${item.id}`}>
@@ -56,19 +57,23 @@ const Home = () => {
                   </p>
                 </div>
               );
-          })}
+            })}
         </div>
       </div>
 
       <div className="latest-article-section">
         <img
           src="https://newspaperads.ads2publish.com/wp-content/uploads/2018/08/giordano-time-wear-upto-50-off-ad-times-of-india-mumbai-21-08-2018-568x945.png"
-          alt=""
+          alt="not found"
         />
         <div className="latest-article">
           <h3 className="latest">Latest</h3>
-          {homeData.newsData.map((item, index) => {
-            if (item.category === "Tech" && index > 48 && index < 54)
+          {homeData.newsData
+            .filter(
+              (item, index) =>
+                item.category === "Tech" && index > 48 && index < 54
+            )
+            .map((item, index) => {
               return (
                 <>
                   <div className="item-2">
@@ -93,7 +98,7 @@ const Home = () => {
                   </div>
                 </>
               );
-          })}
+            })}
         </div>
       </div>
 
@@ -108,8 +113,12 @@ const Home = () => {
         </div>
         <div className="top-post">
           <h3 className="latest">Latest</h3>
-          {homeData.newsData.map((item, index) => {
-            if (item.category === "Food" && index > 60 && index < 65)
+          {homeData.newsData
+            .filter(
+              (item, index) =>
+                item.category === "Food" && index > 60 && index < 65
+            )
+            .map((item, index) => {
               return (
                 <>
                   <div className="item-2 toppost-item">
@@ -133,15 +142,19 @@ const Home = () => {
                   </div>
                 </>
               );
-          })}
+            })}
         </div>
       </div>
 
       <div className="latest-stories-section">
         <h3 className="latest-stories">Latest Stories</h3>
         <div className="story-flex">
-          {homeData.newsData.map((item, index) => {
-            if (item.category == "Fitness" && index > 38 && index < 42)
+          {homeData.newsData
+            .filter(
+              (item, index) =>
+                item.category === "Fitness" && index > 38 && index < 42
+            )
+            .map((item, index) => {
               return (
                 <>
                   <div className="item-3">
@@ -150,7 +163,7 @@ const Home = () => {
                   </div>
                 </>
               );
-          })}
+            })}
         </div>
       </div>
     </>

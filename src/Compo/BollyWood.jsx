@@ -11,9 +11,9 @@ const BollyWood = () => {
     <div className="container">
       <h3 className="category-title">BollyWood</h3>
 
-      {bollyWoodData.newsData.map((item, index) => {
-        count_1++;
-        if (item.category === "Bollybood" && count_1 <= 10) {
+      {bollyWoodData.newsData
+        .filter((item, index) => item.category === "Bollybood" && index < 10)
+        .map((item, index) => {
           return (
             <div key={index} className="container-1">
               <div className="flex_container box1">
@@ -38,14 +38,16 @@ const BollyWood = () => {
               ></hr>
             </div>
           );
-        }
-      })}
+        })}
       {/* ........................................ */}
       <div className="container2">
         <h4>TOP headLine</h4>
-        {bollyWoodData.newsData.map((item, index) => {
-          count_2++;
-          if (item.category === "Bollybood" && count_2 >= 11 && count_2 <= 14) {
+        {bollyWoodData.newsData
+          .filter(
+            (item, index) =>
+              item.category === "Bollybood" && index > 10 && index < 15
+          )
+          .map((item, index) => {
             return (
               <div key={index}>
                 <div className="flex_container2">
@@ -70,8 +72,7 @@ const BollyWood = () => {
                 ></hr>
               </div>
             );
-          }
-        })}
+          })}
       </div>
     </div>
   );

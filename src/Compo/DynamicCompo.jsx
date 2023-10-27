@@ -9,15 +9,10 @@ export default function DynamicCompo() {
   let titleName;
   return (
     <div>
-      {contextData.newsData.map((item, index) => {
-        // console.log(typeof parseInt(id));
-        // console.log(id);
-        // console.log(typeof item.id);
-        // console.log(item.id);
-        // console.log(parseInt(id) === item.id);
-        if (parseInt(id) === item.id) {
+      {contextData.newsData
+        .filter((item, index) => parseInt(id) === item.id)
+        .map((item, index) => {
           titleName = item.category;
-          console.log(titleName);
           return (
             <div className="container">
               <h2 className="heading">{item.title}</h2>
@@ -31,17 +26,15 @@ export default function DynamicCompo() {
               <button onClick={() => Navigate(-1)}>Back</button>
             </div>
           );
-        }
-      })}
-      {contextData.newsData.map((item, index) => {
-        console.log(
-          `${index} ${item.category} ${titleName} ${item.category == titleName}`
-        );
-        if (
-          index >= parseInt(id) &&
-          index < parseInt(id) + 3 &&
-          item.category == titleName
-        ) {
+        })}
+      {contextData.newsData
+        .filter(
+          (item, index) =>
+            index >= parseInt(id) &&
+            index < parseInt(id) + 3 &&
+            item.category === titleName
+        )
+        .map((item, index) => {
           return (
             <div key={index}>
               <div className="flex_container2">
@@ -66,8 +59,7 @@ export default function DynamicCompo() {
               ></hr>
             </div>
           );
-        }
-      })}
+        })}
     </div>
   );
 }

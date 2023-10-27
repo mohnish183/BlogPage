@@ -4,16 +4,17 @@ import "../CompoUI/BollyWood.css";
 import { StoreData } from "../Store/Store";
 const Fitness = () => {
   const bollyWoodData = useContext(StoreData);
-  let count_1 = 0,
-    count_2 = 0;
 
   return (
     <div className="container">
       <h3 className="category-title">Fitness</h3>
 
-      {bollyWoodData.newsData.map((item, index) => {
-        count_1++;
-        if (item.category === "Fitness" && count_1 > 30 && count_1 < 41) {
+      {bollyWoodData.newsData
+        .filter(
+          (item, index) =>
+            item.category === "Fitness" && index > 30 && index < 41
+        )
+        .map((item, index) => {
           return (
             <div key={index} className="container-1">
               <div className="flex_container box1">
@@ -38,14 +39,16 @@ const Fitness = () => {
               ></hr>
             </div>
           );
-        }
-      })}
+        })}
       {/* ........................................ */}
       <div className="container2">
         <h4>TOP headLine</h4>
-        {bollyWoodData.newsData.map((item, index) => {
-          count_2++;
-          if (item.category === "Fitness" && count_2 > 40 && count_2 < 45) {
+        {bollyWoodData.newsData
+          .filter(
+            (item, index) =>
+              item.category === "Fitness" && index > 40 && index < 45
+          )
+          .map((item, index) => {
             return (
               <div key={index}>
                 <div className="flex_container2">
@@ -70,8 +73,7 @@ const Fitness = () => {
                 ></hr>
               </div>
             );
-          }
-        })}
+          })}
       </div>
     </div>
   );
